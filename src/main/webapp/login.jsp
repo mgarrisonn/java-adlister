@@ -17,11 +17,22 @@
 %>
 <html>
 <head>
-    <title>Login</title>
+
+    <jsp:include page="partials/head.jsp">
+        <jsp:param name="title" value="Please Log In" />
+    </jsp:include>
+<%--    <% request.setAttribute("title", "Login"); %> --%>
+<%--    <%@ include file="partials/head.jsp" %>--%>
+
 </head>
 <body>
+<%--    <%@ include file="partials/navbar.jsp"%>--%>
+    <jsp:include page="partials/navbar.jsp" />
+
+
+
     <h1>Log in</h1>
-    <form action="login.jsp" method="post">
+    <form action="login.jsp" method="post" >
         <h3>Username:</h3>
         <input type="text" id="username" name="username">
         <br>
