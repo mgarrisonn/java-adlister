@@ -27,7 +27,7 @@
 </head>
 <body>
 <%--    <%@ include file="partials/navbar.jsp"%>--%>
-    <jsp:include page="partials/navbar.jsp" />
+    <jsp:include page = "partials/navbar.jsp" />
 
 
 
