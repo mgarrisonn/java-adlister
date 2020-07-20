@@ -4,6 +4,7 @@
     <jsp:include page="partials/head.jsp">
         <jsp:param name="title" value="Please Log In" />
     </jsp:include>
+    <%@ include file="/partials/theme-preference.jsp" %>
 </head>
 <body>
     <jsp:include page="partials/navbar.jsp" />
