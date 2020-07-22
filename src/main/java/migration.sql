@@ -15,15 +15,15 @@ DROP TABLE IF EXISTS ads;
 CREATE TABLE user (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(150) NOT NULL,
-    email VARCHAR(150) NOT NULL,
+    email VARCHAR(150),
     password VARCHAR(150) NOT NULL
 );
 
 CREATE TABLE ads (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user_id INT UNSIGNED NOT NULL ,
-    title VARCHAR(100) NOT NULL,
-    description TEXT NOT NULL,
+    user_id INT UNSIGNED NOT NULL,
+    title VARCHAR(100),
+    description TEXT,
     FOREIGN KEY (user_id) REFERENCES user(id)
 );
 
