@@ -1,0 +1,29 @@
+# DROP DATABASE IF EXISTS contacts_db;
+#
+# CREATE DATABASE contacts_db;
+#
+# CREATE TABLE contacts(
+#     id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+#     name VARCHAR(50) NOT NULL,
+#     phone_number VARCHAR(25) NOt NULL
+# );
+USE adlister_db;
+
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS ads;
+
+CREATE TABLE user (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(150) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    password VARCHAR(150) NOT NULL
+);
+
+CREATE TABLE ads (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_id INT UNSIGNED NOT NULL ,
+    title VARCHAR(100) NOT NULL,
+    description TEXT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES user(id)
+);
+
